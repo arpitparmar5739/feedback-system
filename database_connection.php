@@ -3,9 +3,9 @@
 $conn_error = '<strong>Could not connect to database.</strong>';
 $mysql_host = 'localhost';
 $mysql_user = 'root';
-$mysql_password = 'Windows10';
+$mysql_password = 'svvvteamaa';
 
-$mysql_db = 'feedback_new';
+$mysql_db = 'feedback';
 
 $conn = @mysql_connect($mysql_host,$mysql_user, $mysql_password);
 
