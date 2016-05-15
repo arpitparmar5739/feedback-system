@@ -41,6 +41,9 @@ if(!isset($_SESSION['login_admin']))
         <div class="operation_container">
             <a href="create_form.php">Create New Form</a>
         </div>
+		<div class="operation_container">
+            <a href="admin_change_password.php">Change Password</a>
+        </div>
     </div>
 
 </body>
