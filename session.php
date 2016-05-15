@@ -43,6 +43,11 @@ else if(isset($_SESSION['login_principal']))
 	$login_session = $row_principal['principal'];
 }
 
+	//Fetch Current Session
+	$session_detail=mysql_query("SELECT session from session_details ORDER BY session DESC LIMIT 1");
+	$row_session = mysql_fetch_assoc($session_detail);
+	$current_session = $row_session['session'];
+
 if(!isset($login_session))
 {
 	header('Location: index.php'); // Redirecting To Home Page

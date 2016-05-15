@@ -40,8 +40,11 @@ if(!isset($_SESSION['login_fc']))
     <div class="operation_container">
         <a href="reports.php">Generate Reports</a>
     </div>
+	<!--<div class="operation_container">
+        <a href="verify.php">Verify Admin</a>
+    </div>-->
 	<div class="operation_container">
-        <a href="verify_page.php">Verify Admins</a>
+        <a href="generate_session.php">Generate New Session</a>
     </div>
 </div>
 
