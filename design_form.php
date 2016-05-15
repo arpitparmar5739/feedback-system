@@ -137,7 +137,7 @@ if(!isset($_SESSION['login_admin']))
 		
 		
 		//Fetch data of all subjects
-		$subject_query = "SELECT * FROM subjects ORDER BY scode;";
+		$subject_query = "SELECT * FROM subjects WHERE sub_sem=$sem ORDER BY scode;";
         $subjects_result = mysql_query($subject_query) or die(mysql_error());
         
         for($x = 0; $subject[$x] = mysql_fetch_assoc($subjects_result); $x++) ;
