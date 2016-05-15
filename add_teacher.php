@@ -64,6 +64,8 @@ if(!isset($_SESSION['login_admin']))
             </div>
             <input type="submit" value="Add" />
         </form>
+		
+		<br /><input type="button" onclick="location.href='admin_panel.php';" value="Go Back" />
 
     </div>
 </body>

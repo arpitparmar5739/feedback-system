@@ -37,6 +37,7 @@ if(!isset($_SESSION['login_fc']))
          Feedback System | Feedback Co-ordinator Reports
     </span>
     </div>
+	<br /><input type="button" onclick="location.href='fc_panel.php';" value="Go Back" /><br /><br />
     <div>
 
         <div class="college_department">
@@ -149,5 +150,6 @@ if(!isset($_SESSION['login_fc']))
             </div>
         </div>
     </div>
+	
 </body>
 </html>

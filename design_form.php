@@ -225,6 +225,7 @@ if(!isset($_SESSION['login_admin']))
             <input type="submit" value="Submit" class="submit" />
 		</div>	
 		
+		<br /><input type="button" onclick="location.href='admin_panel.php';" value="Go Back" />
 		
   <script src="chosen/jquery.min.js" type="text/javascript"></script>
   <script src="chosen/chosen.jquery.js" type="text/javascript"></script>

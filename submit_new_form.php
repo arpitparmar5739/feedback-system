@@ -66,7 +66,8 @@ if(isset($_POST['f1']) && isset($_POST['s1']) && isset($_POST['skill1']) && isse
 <div style="margin:auto; margin-top:50px ; text-align:center ; box-shadow:0 0 5px rgba(0,0,0,0.7) ; box-radius:20px ; width:60% ; padding:20px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
 <h2> Form Created Successfully for Semester <?php echo $sem; ?> ! </h2>
 <p>Form ID : <?php echo $form_id; ?></p>
-<a href="create_form.php" style="text-decoration:none; color:black;"><button>Create more forms</button></a>
+<br /><input type="button" onclick="location.href='create_form.php';" value="Create more forms" /><br />
+<br /><input type="button" onclick="location.href='admin_panel.php';" value="Back to Admin Panel" />
 </div>
 </body>
 </html>

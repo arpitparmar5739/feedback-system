@@ -65,6 +65,9 @@ if(!isset($_SESSION['login_principal']))
                 <input type="submit" value="Show Report" />
             </form>
         </div>
+		
+		<br /><br /><input type="button" onclick="location.href='principal_panel.php';" value="Go Back" />
+		
     </div>
     <br />
     <br />

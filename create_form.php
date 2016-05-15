@@ -86,6 +86,7 @@ if(!isset($_SESSION['login_admin']))
                 <input type="reset" value="Clear" />
                 <input type="submit" value="Create Form" />
             </p>
+			<input type="button" onclick="location.href='admin_panel.php';" value="Back to Admin Panel" />
 
         </form>
 
