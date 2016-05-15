@@ -38,22 +38,31 @@ if(!isset($_SESSION['login_fc']))
 
 <div class="operations">
 	<div class="operation_container">
-		<b>Current Session : </b><?php echo $current_session; ?><br /><br />
+		<h2>Current Session : <i><?php echo $current_session; ?></i></h2>
+		To generate a new session, provide your password and click the button below :<br /><br/>
+		<div>
         <form action="generate_session.php" method="POST">
+		Password : <input type="password" name="password" required><br /><br />
 		<input type="submit" value="Generate New Session for <?php echo $current_session+1 ;?>" name="submit_session"/>
 		</form>
+		</div>
     </div>
+	
+	<br /><br /><input type="button" onclick="location.href='fc_panel.php';" value="Go Back" />
 </div>
 
 </body>
 </html>
 
 <?php
-if(isset($_POST['submit_session']))
+if(isset($_POST['submit_session']) && isset($_POST['password']) && !empty($_POST['password']))
 {
+	$password = $_POST['password'];
+	if($password == $row_fc['password'])
+	{
 	$date_created = date('Y-m-d',time());
 	$new_session = $current_session+1;
-	$session_added=mysql_query("INSERT INTO session_details (`session`,`date`) VALUES ($new_session,$date_created)") or die(mysql_error());
+	$session_added=mysql_query("INSERT INTO session_details (`session`,`date`) VALUES ($new_session,'$date_created')") or die(mysql_error());
 	
 	$teacher_report_default=mysql_query("ALTER TABLE `teacher_report` CHANGE `session` `session` INT(5) NOT NULL DEFAULT $new_session") or die(mysql_error());
 	
@@ -73,7 +82,21 @@ if(isset($_POST['submit_session']))
 	
 	if($session_added && $teacher_report_default && $feedback_forms_default && $teacher_report_initialized)
 	{
-		echo "New session generated successfully";
+		?>
+		<script>
+		alert("New session generated successfully !");
+		window.location.href = "fc_panel.php";
+		</script>
+		<?php
+	}
+	}
+	else
+	{
+		?>
+		<script>
+		alert("Password Incorrect !");
+		</script>
+		<?php
 	}
 
 }
