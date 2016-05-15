@@ -58,7 +58,7 @@ if(!isset($_SESSION['login_admin']))
                         <td>Sem 
                         </td>
                         <td>
-                            <input type="number" name="sem" />
+                            <input type="number" name="sem" min=0 max=8 required/>
                         </td>
                     </tr>
                 </table>
@@ -67,15 +67,10 @@ if(!isset($_SESSION['login_admin']))
             <div style="padding: 10px; margin: auto; box-shadow: 0 0 5px rgba(0, 0, 0, 0.6); border-radius: 20px;">
                 <table style="margin: auto">
                     <tr>
-                        <td>Form Name : </td>
-                        <td>
-                            <input type="text" maxlength="20" name="form_name" required /></td>
-                    </tr>
-                    <tr>
-                        <td>Number of Teachers :</td>
+                        <td>Number of Faculties :</td>
                         </td>
                                 <td>
-                                    <input type="number" name="no_teacher" required />
+                                    <input type="number" name="no_teacher" min=0 max=20 required />
                     </tr>
 					
 					<!--<input type="hidden" name="no_skill" value="9" />-->
@@ -95,6 +90,5 @@ if(!isset($_SESSION['login_admin']))
         </form>
 
     </div>
-
 </body>
 </html>

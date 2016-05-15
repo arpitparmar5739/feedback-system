@@ -98,16 +98,36 @@ if(!isset($_SESSION['login_admin']))
     </div>
 	
     <?php
-	if(isset($_POST['sem']))
+	if(isset($_POST['sem']) && isset($_POST['section']) && isset($_POST['no_teacher']) && isset($_POST['branch']) && !empty($_POST['section']) && !empty($_POST['no_teacher']) && !empty($_POST['sem']))
     {
         $branch = $_POST['branch'];
         $section = $_POST['section'];
-        $name = $_POST['form_name'];
         $rows = $_POST['no_teacher'];
         $sem = $_POST['sem'];
 		
+		$name = $branch."-".$section." Feedback Semster : ".$sem;
+		
         $cols = 9;
         
+		$form_check_query = "SELECT * FROM feedback_forms WHERE branch='$branch' AND section='$section' AND sem=$sem AND session=$current_session";
+		
+		$form_check = mysql_query($form_check_query) OR die(mysql_error());
+		
+		$forms = mysql_num_rows($form_check);
+		
+		if($forms != 0)
+		{
+			?>
+			<script>
+			alert('This form has already been created !\nPlease create other forms..');
+			window.location = "create_form.php";
+			</script>
+			
+			<?php
+	
+		}
+		
+		
 		//Fetch data of all faculties
         $teacher_query = "SELECT * FROM teachers_info ORDER BY tname;";
         $teachers_result = mysql_query($teacher_query) or die(mysql_error());
