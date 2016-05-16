@@ -54,7 +54,7 @@ if(!isset($_SESSION['login_admin']))
                 <div style="margin:10px auto 10px auto;">
                     Faculty ID  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:
                     
-                        <input type="number" name="fid" required autofocus />
+                        <input type="number" name="fid" min=0 required autofocus />
                 </div>
                 <div style="margin:10px auto 10px auto;">
                     Faculty Name :                   
