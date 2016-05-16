@@ -7,7 +7,7 @@ if(!isset($_SESSION['login_fc']))
 
 $message=''; // Variable To Store Message
 
-if (isset($_POST['submit'])) 
+if (isset($_POST['id']))
 {
 	if (empty($_POST['id'])) 
 	{
@@ -30,7 +30,7 @@ if (isset($_POST['submit']))
 		
 		if($verified)
 		{
-			$message = "Verification Successfull!" ;
+			$message = "Verification Successfull !" ;
 			echo "<script>";
 			echo "alert('$message');";
 			echo "</script>";
