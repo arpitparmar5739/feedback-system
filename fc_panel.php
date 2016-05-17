@@ -37,9 +37,13 @@ if(!isset($_SESSION['login_fc']))
 </div>
 
 <div class="operations">
-    <div class="operation_container">
+	<div class="operation_container">
         <a href="reports.php">Generate Reports</a>
     </div>
+	<div class="operation_container">
+        <a href="fc_stats.php">Statistics</a>
+    </div>
+	<br /><br /><br />
 	<div class="operation_container">
         <a href="generate_session.php">Generate New Session</a>
     </div>
