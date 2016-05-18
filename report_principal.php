@@ -36,18 +36,33 @@ if(!isset($_SESSION['login_principal']))
     </div>
     <div class="container">
         <div class="college_report">
-            <form action="principal_college_report.php" method="POST">
+            <form action="reports/principal_college_report.php" method="POST">
                 <div>
                     <h1>College level report</h1>
                 </div>
+                <b>Select Session - </b><select name="year" required>
+                    
+                <?php
+                    $currentYear = date("Y");
+                    for($i=$currentYear; $i >= 2014 ; $i--)
+                    {
+                        $j=$i+1;
+                        echo "<option value='$i'>$i - $j</option>";
+                    }
+                ?>
+                
+                </select>
+                <br />
+                <br />
                 <input type="submit" value="Show Report" />
             </form>
         </div>
         <div class="department_report">
-            <form action="principal_department_report.php" method="POST">
+            <form action="reports/principal_department_report.php" method="POST">
                 <div>
                     <h1>Department level report</h1>
                 </div>
+                <b>Select Branch - </b>
                 <select name="selected_department" required="required">
                     <option value="">(Select)</option>
 						<option value="CS">CS</option>
@@ -59,6 +74,20 @@ if(!isset($_SESSION['login_principal']))
                         <option value="ME">Mechanical</option>
                         <option value="TX">Textile</option>
                         <option value="AU">Automobile</option>
+                </select>
+                <br />
+                <br />
+                <b>Select Session - </b><select name="year" required>
+                    
+                <?php
+                    $currentYear = date("Y");
+                    for($i=$currentYear; $i >= 2014 ; $i--)
+                    {
+                        $j=$i+1;
+                        echo "<option value='$i'>$i - $j</option>";
+                    }
+                ?>
+                
                 </select>
                 <br />
                 <br />

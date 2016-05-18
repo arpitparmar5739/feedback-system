@@ -42,20 +42,32 @@ if(!isset($_SESSION['login_fc']))
 
         <div class="college_department">
             <div class="college_report">
-                <form action="report_results_college.php" method="POST">
+                <form action="reports/report_results_college.php" method="POST">
                     <div>
-                        <h1>College level report</h1>
+                        <h1 style="margin-bottom:30px;">College level report</h1>
                     </div>
+                    
+                    <b>Select Session - </b><select name="year" required>
+                    <?php
+                    $currentYear = date("Y");
+                    for($i=$currentYear; $i >= 2014 ; $i--)
+                    {
+                        $j=$i+1;
+                        echo "<option value='$i'>$i - $j</option>";
+                    }
+                    ?>
+                    </select>
                     <br />
                     <br />
                     <input type="submit" value="Show Report" />
                 </form>
             </div>
             <div class="department_report">
-                <form action="report_results_department.php" method="POST">
+                <form action="reports/report_results_department.php" method="POST">
                     <div>
                         <h1>Department level report</h1>
                     </div>
+                    <b>Select Branch -</b> 
                     <select name="selected_department" required="required">
                         <option value="">(Select)</option>
                         <option value="CS">CS</option>
@@ -70,15 +82,27 @@ if(!isset($_SESSION['login_fc']))
                     </select>
                     <br />
                     <br />
+                    <b>Select Session - </b><select name="year" required>
+                    <?php
+                    $currentYear = date("Y");
+                    for($i=$currentYear; $i >= 2014 ; $i--)
+                    {
+                        $j=$i+1;
+                        echo "<option value='$i'>$i - $j</option>";
+                    }
+                    ?>
+                    </select>
+                    <br />
+                    <br />
                     <input type="submit" value="Show Report" />
                 </form>
             </div>
-
+            
         </div>
 
         <div class="semester_faculty">
             <div class="semester_report">
-                <form action="report_results_semester.php" method="POST">
+                <form action="reports/report_results_semester.php" method="POST">
 
                     <div>
                         <h1>Semester level report</h1>
@@ -116,13 +140,25 @@ if(!isset($_SESSION['login_fc']))
                     </select>
                     <br />
                     <br />
+                    <b>Select Session - </b><select name="year" required>
+                    <?php
+                        $currentYear = date("Y");
+                        for($i=$currentYear; $i >= 2014 ; $i--)
+                        {
+                            $j=$i+1;
+                            echo "<option value='$i'>$i - $j</option>";
+                        }
+                    ?>
+                    </select>
+                    <br />
+                    <br />
                     <input type="submit" value="Show Report" />
 
                 </form>
             </div>
 
             <div class="faculty_report">
-                <form action="report_results_faculty.php" method="POST">
+                <form action="reports/report_results_faculty.php" method="POST">
                     <div>
                         <h1>Individual faculty report</h1>
                     </div>
