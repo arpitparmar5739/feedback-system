@@ -77,10 +77,11 @@ if(isset($_POST['submit_session']) && isset($_POST['password']) && !empty($_POST
 		$insert_query = $insert_query."(".$row['fid']."),";
 	}
 	
+	$student_login_refresh = mysql_query("DELETE FROM students_login") or die(mysql_error());
 	$insert_query = substr($insert_query,0 ,-1);
 	$teacher_report_initialized = mysql_query($insert_query) or die(mysql_error());
 	
-	if($session_added && $teacher_report_default && $feedback_forms_default && $teacher_report_initialized)
+	if($session_added && $teacher_report_default && $feedback_forms_default && $teacher_report_initialized && $student_login_refresh)
 	{
 		?>
 		<script>
