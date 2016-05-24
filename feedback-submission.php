@@ -115,8 +115,9 @@ for ($i = 0; $i < $totalRows; $i++) {
     }
 }
 
-//All values have been stored successfully i have an idea to make this thing even faster by storing the values as average where fid repeats.
-//But i am too lazy to do that now so i will do it later or never by the way this thing is also fast enough.
+//All values have been stored successfully i have an idea to make this thing even faster by storing the 
+//values as average where fid repeats.But i am too lazy to do that now so i will do it later or never by 
+//the way this thing is fast enough.
 
 //Updating the form_data table.
 $counter_fd_query = "SELECT `counter`,`session` FROM feedback_forms WHERE form_id=$form_id";

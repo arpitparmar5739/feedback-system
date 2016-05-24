@@ -1,5 +1,6 @@
 <?php
 	require 'session.php';
+	require 'functions/createStudentLoginId.php';
 	
 	if(!isset($_SESSION['login_admin']))
 	{
@@ -50,7 +51,7 @@ if(isset($_POST['f1']) && isset($_POST['s1']) && isset($_POST['skill1']) && isse
 		
 		if($add_result && $result)
 		{
-			
+			createStudentLoginId($form_id);
 ?>
 <html>
 <head>
