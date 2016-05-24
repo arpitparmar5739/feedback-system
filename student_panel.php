@@ -49,7 +49,7 @@ if(!isset($_SESSION['login_student']))
 	{
 		die( "<h2>Form has already been filled by you ! You can not resubmit the form now !</h2>" );
 	}
-	$form_id_query = mysql_query("SELECT * FROM feedback_forms WHERE branch = '".$row_student['branch']."' AND section = '".$row_student['section']."' AND sem = '".$row_student['sem']."' ");
+	$form_id_query = mysql_query("SELECT * FROM feedback_forms WHERE branch = '".$row_student['branch']."' AND section = '".$row_student['section']."' AND sem = '".$row_student['sem']."' AND session = ".$current_session." ");
 	
 	$no_forms = mysql_num_rows($form_id_query);
 	

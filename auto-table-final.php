@@ -32,10 +32,6 @@
         </head>
         <body style="background:#d6d6ff;padding:15px;">
 
-            <div id="logout">        
-                    <a href="logout.php" style="text-decoration:none;"><input type="button" value="Log Out" id="button" /></a>        
-            </div>
-
         <div style="margin:auto; margin-top:-10px ; text-align:center ;">
         <span style="font-size:40px;font-weight:bold;text-shadow:0 1px 2px black;"><img src="images/logo.png" /><!-- Shri Vaishnav Institute Of Technology And Science, Indore --></span>
         <!-- <h1 style="margin-top:-20px;">Feedback Form</h1> -->
