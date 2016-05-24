@@ -186,7 +186,7 @@ if(!isset($_SESSION['login_admin']))
 					while($j<$x)
 					{
 						$sid = $subject[$j]['sid'];
-						$sname = "(".$subject[$j]['scode'].") ".$subject[$j]['sname'];
+						$sname = $subject[$j]['scode']." - ".$subject[$j]['sname'];
 
                 ?>
 						<option value="<?php echo $sid; ?>"><?php echo $sname; ?> </option>
