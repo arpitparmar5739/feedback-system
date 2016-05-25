@@ -12,13 +12,13 @@
             $headElement = "td";
         }
         echo "<table>";
-        echo "<tr>";
+        echo "<thead><tr>";
         for($i=0 ; $i < $NumColumns ; $i++)
         {
             $header = $table[0][$i];
             echo "<$headElement>$header</$headElement>";
         }
-        echo "</tr>";
+        echo "</tr></thead>";
         
         for($i=1; $i<$NumRows ; $i++)
         {
