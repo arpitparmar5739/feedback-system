@@ -15,6 +15,7 @@ table {
     -ms-word-wrap: break-word;
     word-wrap: break-word;
     table-layout: fixed;
+	width : 100%;
 }
 
 th {
