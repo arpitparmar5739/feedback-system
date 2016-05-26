@@ -80,7 +80,7 @@ if(!isset($_SESSION['login_fc']) and !isset($_SESSION['login_admin']))
             <option value="EI">EI</option>
             <option value="CE">CE</option>
             <option value="ME">ME</option>
-            <option value="TX">TX</option>
+            <option value="TT">TX</option>
             <option value="AU">AU</option>
         </select>
 
