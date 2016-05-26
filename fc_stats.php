@@ -126,7 +126,7 @@ if(!isset($_SESSION['login_fc']))
 	setInterval(function()
 	{
 		$('#stats').load('fc_stats.php #stats');
-	}, 5000)
+	}, 1000)
 	</script>
 	
 </body>
