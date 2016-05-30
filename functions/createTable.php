@@ -11,14 +11,23 @@
         {
             $headElement = "td";
         }
+        
         echo "<table>";
-        echo "<thead><tr>";
+        if($headerBool)
+        {
+            echo "<thead>";
+        }
+        echo "<tr>";
         for($i=0 ; $i < $NumColumns ; $i++)
         {
             $header = $table[0][$i];
             echo "<$headElement>$header</$headElement>";
         }
-        echo "</tr></thead>";
+        echo "</tr>";
+        if($headerBool)
+        {
+            echo "</thead>";
+        }
         
         for($i=1; $i<$NumRows ; $i++)
         {
