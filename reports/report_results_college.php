@@ -60,7 +60,7 @@
                      ,a.`$columns[11]`,a.`$columns[12]`,FORMAT((a.`$columns[$startindex]`+a.`$columns[5]`+a.`$columns[6]`
                      +a.`$columns[7]`+a.`$columns[8]`+a.`$columns[9]`+a.`$columns[10]`+a.`$columns[11]`+a.`$columns[12]`)
                      /$totalskills,2) AS avg FROM teacher_report a, teachers_info b,(SELECT @z:=0) AS z WHERE a.`fid`=b.`fid` 
-                     AND a.`session`=$year ORDER BY avg DESC";
+                     AND a.`session`=$year and a.`counter`!=0 ORDER BY avg DESC";
             $result = mysql_query($query) or die(mysql_error());
             
             $table[0] = $Head;            
