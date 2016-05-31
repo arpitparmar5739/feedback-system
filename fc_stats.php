@@ -90,7 +90,7 @@ if(!isset($_SESSION['login_fc']))
                                         <option value="EI">EI</option>
                                         <option value="CE">CE</option>
                                         <option value="ME">ME</option>
-                                        <option value="TT">TX</option>
+                                        <option value="TX">TX</option>
                                         <option value="AU">AU</option>                                      
 					</select>
 					<input type="submit" value="Submit" class="submit" />
