@@ -1,3 +1,3 @@
 <?php
-include('login_page.php');
+    require "login_page.php";
 ?>
